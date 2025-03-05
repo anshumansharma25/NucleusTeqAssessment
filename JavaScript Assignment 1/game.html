@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="title">🎲 Dice Roll Game 🎲</h1>
+
+        <div class="box">
+            
+            <div class="playerDetail">
+                <h2><span id="player1"></span>: <span id="player1Score"></span></h2>
+                <h2><span id="player2"></span>: <span id="player2Score"></span></h2>
+            </div>
+
+            <div class="score">
+                <h4>Current Score: 0<span id="current"></span></h4>                
+            </div>
+
+            <div id="dice" class="dice">
+            </div>
+
+            <div class="buttons">
+
+                <button id="roll" onclick="rollDice()">Roll the dice</button>
+                <button id="save">Save Score</button>
+                <button id="reset" onclick="location.href='index.html'">Reset Game</button>
+                
+            </div>
+
+            <h2 id="winner"></h2>
+        
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById("player1").textContent = localStorage.getItem("player1") || "Player 1";
+        document.getElementById("player2").textContent = localStorage.getItem("player2") || "Player 2";
+    </script>
+
+    <script src="index.js"></script>
+
+
+</body>
+</html>
