@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Quiz</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Trivia Quiz</h1>
+
+        <div class="box">
+
+            <h2>Welcome to Trivia Quiz!</h2>
+
+            <div class="details">
+                <div class="playerName">
+                    <input type="text" id="player" placeholder="Enter player name">
+                </div>
+
+                <div class="category-select">
+                    <select name="genre" id="category">
+                        <option value="" placeholder="Choose a category" disabled selected hidden>Choose a category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="27">Animals</option>
+                        <option value="23">History</option>
+                    </select>
+                </div>
+
+                <div class="difficulty-radio" id="difficulty">
+                    <p><input type="radio" name="difficulty" value="easy"> Easy</p>
+                    <p><input type="radio" name="difficulty" value="medium"> Medium</p>
+                    <p><input type="radio" name="difficulty" value="hard"> Hard</p>
+                </div>
+
+            </div>
+            <p id="alert"></p>
+            <button class="submit" id="submit">Start Quiz</button>
+
+        </div>
+
+    </div>
+<script src="index.js"></script>r
+</body>
+</html>
