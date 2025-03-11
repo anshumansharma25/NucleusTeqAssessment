@@ -8,21 +8,22 @@
 .container {
     height: 100vh;
     width: 100vw;
-    background-color: #121212; 
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    color: #e0e0e0; 
+    color: #e0e0e0;
+    padding: 20px;
 }
 
 .box {
-    height: auto;
-    width: 500px;
-    background-color: #1e1e1e; 
+    width: 100%;
+    max-width: 500px;
+    background-color: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.08); 
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.08);
     color: #e0e0e0;
     display: flex;
     align-items: center;
@@ -36,11 +37,11 @@
 h1 {
     font-size: 2rem;
     font-weight: 600;
-    color: #f39c12; 
+    color: #f39c12;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #bbb;
 }
@@ -55,7 +56,7 @@ h2 {
 #player,
 #category {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #222;
@@ -64,8 +65,9 @@ h2 {
 }
 
 .difficulty-radio {
-    text-align: center;
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-evenly;
 }
 
@@ -75,7 +77,7 @@ input[type="radio"] {
 
 #submit {
     width: 100%;
-    background-color: #3498db; 
+    background-color: #3498db;
     color: white;
     border: none;
     padding: 12px 18px;
@@ -88,5 +90,44 @@ input[type="radio"] {
 }
 
 #submit:hover {
-    background-color: #2980b9; 
+    background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .box {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #player, #category {
+        padding: 10px;
+    }
+
+    #submit {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .box {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .difficulty-radio {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
